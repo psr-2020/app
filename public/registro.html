@@ -1,46 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- CSS only -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="./stylesheets/registro.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
-  <!-- JS, Popper.js, and jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-  <title>Rincón del Gaming</title>
-</head>
-<body>
+    <title>Rincón del Gaming</title>
+  </head>
 
-  <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary">Registrarme</button>
-  </form>
+  <body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Populares</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Recientes</a>
+              </li>
+          </ul>
+      </div>
   
-</body>
+      <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto">Rincón del Gaming</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+  
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Acceder</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="registro.html">Registrar</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+
+    <div id="page-content">
+      <div class="container text-left">
+        
+        <div class="row justify-content-left">
+          
+          <div class="col-sm-5">
+            <h3> Unete a nuestra comunidad</h3>
+            <h4> <br> Es totalmente gratis</h4>
+            <p> <br> Crea tus propias reseñas <br> Que se yo <br> Evalua reseñas <br> </p>
+          </div>
+
+          <div class="col-sm-4">
+            <form id="crearCuenta">
+              <div class="form-group aling" >
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputNombre">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputApellido">Apellido</label>
+                    <input type="text" class="form-control" id="inputApellido" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group aling" >
+                <label for="inputNickname">Nombre de usuario</label>
+                <input type="text" class="form-control" id="InputNick" aria-describedby="emailHelp" placeholder="">
+              </div>
+              <div class="form-group aling" >
+                <label for="inputEmail">Dirección de correo electronico</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
+                <small id="emailHelp" class="form-text text-muted">Tiene que ser un e-mail válido.</small>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="">
+                <small id="passwordHelp" class="form-text text-muted">Nunca compartas tu contraseña con nadie.</small>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="checkeoTerminos">
+                <label class="form-check-label" for="exampleCheck1"> <small id="passwordHelp" class="form-text text-muted"> Acepto los términos de servicio, política de privacidad y política de cookies</small></label>
+                
+              </div>
+              <button type="submit" class="btn btn-primary">Registrarme</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; El Rincón Del Gaming</small>
+      </div>
+    </footer>
+
+  </body>
 </html>
-
 <script>
-  $( document ).ready(function() {
-    $.get("http://localhost:3000/registro", function(data)
-    {
-      console.log(data);
-    }
-    );
 
+  cuentas = [];
+
+  $.get("http://localhost:3000/registro", function(data){
+    cuentas = data.response;
   });
 
+  function existeCuenta(nick, email){
+    let existe = cuentas.filter(function (i) {
+      console.log("verificando" + i.nickname + nick);
+      if(i.nickname == nick || i.email == email)
+        return 1;
+    });
+    return existe;
+  }
+
+  $('#crearCuenta').on('submit', function (event) {
+          event.preventDefault();
+
+          idNuevo =  Object.keys(cuentas).length;
+          nick = $("#InputNick").val();
+          email = $("#inputEmail").val();
+
+          if(existeCuenta(nick, email) == 0){
+            $.ajax({
+              url: 'http://localhost:3000/registro',
+              type: 'POST',
+              data: {
+                id : idNuevo+1,
+                name: $("#inputNombre").val(),
+                surname: $("#inputApellido").val(),
+                nickname: nick,
+                email: email,
+                password: $("#inputPassword").val(),
+              },
+
+              success: function(result) {
+                alert("Te has registrado correctamente")
+                location.reload();
+              }
+            });
+          }else{
+            alert("ya existe esa cuenta");
+          }
+        });
 </script>

@@ -1,3 +1,12 @@
-{
-
-}
+[
+    {
+        "id" : "1",
+        "nombre" : "Erick",
+        "descripcion" : "hola"
+    },
+    {
+        "id" : "2",
+        "nombre" : "manu",
+        "descripcion" : "hola2"
+    }
+]

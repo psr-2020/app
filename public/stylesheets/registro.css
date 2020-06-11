@@ -5,20 +5,19 @@ body {
 }
 
 .navbar .active{
-  border-radius: 10px 10px;
-  background: linear-gradient(to right, #333333, #999999);
-}
-
+    border-radius: 10px 10px;
+    background: linear-gradient(to right, #333333, #999999);
+  }
 
 #page-content {
-  flex: 3 2 auto;
-  border: 1px solid black;
+  flex: 1 2 auto;
+  padding-top: 5%;
+
 }
 
 #sticky-footer {
   flex-shrink: none;
 }
-
 
 nav {
     background: #ffffff;

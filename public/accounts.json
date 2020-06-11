@@ -1,0 +1,18 @@
+[
+    {
+        "id" : "1",
+        "name" : "Erick",
+        "surname" : "Quispe",
+        "password" : "hola",
+        "nickname": "erickjq10x",
+        "email" : "hola2@hotmail.com"
+    },
+    {
+        "id" : "2",
+        "name" : "Manuel",
+        "surname" : "Cabral",
+        "password" : "hola2",
+        "nickname": "andrewzhbj",
+        "email" : "hola@hotmail.com"
+    }
+]
