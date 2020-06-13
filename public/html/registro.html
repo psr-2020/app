@@ -115,20 +115,20 @@
 
   cuentas = [];
 
-  $.get("http://localhost:3000/registro", function(data){
-    cuentas = data.response;
-  });
-
   function existeCuenta(nick, email){
-    let existe = cuentas.filter(function (i) {
-      console.log("verificando" + i.nickname + nick);
+    return cuentas.filter(function (i){
       if(i.nickname == nick || i.email == email)
         return 1;
     });
-    return existe;
   }
+  
+  $(document).ready(function(){
 
-  $('#crearCuenta').on('submit', function (event) {
+    $.get("http://localhost:3000/registro", function(data){
+      cuentas = data.response;
+    });
+
+    $('#crearCuenta').on('submit', function (event) {
           event.preventDefault();
 
           idNuevo =  Object.keys(cuentas).length;
@@ -150,11 +150,12 @@
 
               success: function(result) {
                 alert("Te has registrado correctamente")
-                //location.reload();
+                location.reload();
               }
             });
           }else{
             alert("ya existe esa cuenta");
           }
-        });
+      });
+  });
 </script>
