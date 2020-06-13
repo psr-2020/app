@@ -1,14 +1,11 @@
 html,
 body {
   height: 100%;
-  background-color:white;
 }
 
-.navbar .active{
-  border-radius: 10px 10px;
-  background: linear-gradient(to right, #333333, #999999);
+#contenido{
+  background-color: white;
 }
-
 
 #page-content {
   flex: 3 2 auto;
@@ -16,11 +13,11 @@ body {
 }
 
 #sticky-footer {
-  flex-shrink: none;
-}
-
-
-nav {
-    background: #ffffff;
-    background: linear-gradient(to right, #333333, #999999);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
