@@ -42,11 +42,9 @@
     </form>
   </nav>
 
-
-
-    <div id="page-content">
-      <div class="container text-left">
-        <div class="row justify-content-left">
+  <div id="page-content">
+    <div class="container text-left">
+      <div class="row justify-content-left">
         
           <div class="col-sm-5" style="margin-top: 10%">
             <h1 class="display-4 text-center text-white">Unete a nosotros</h1>
@@ -88,11 +86,11 @@
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="checkeoTerminos">
                 <label class="form-check-label" for="exampleCheck1"> <small id="passwordHelp" class="form-text text-muted"> Acepto los términos de servicio, política de privacidad y política de cookies</small></label>
-                
               </div>
               <button type="submit" class="btn btn-success">Registrarme</button>
             </form>
           </div>
+
         </div>
       </div>
     </div>
@@ -104,52 +102,67 @@
     </footer>
 
 </body>
-</html>
-<script>
+  <script>
 
-  cuentas = [];
+    cuentas = [];
 
-  function existeCuenta(nick, email){
-    return cuentas.filter(function (i){
-      if(i.nickname == nick || i.email == email)
-        return 1;
-    });
-  }
-  
-  $(document).ready(function(){
+    function textoVacio(str){
+      return (!str || 0 === str.length);
+    }
 
-    $.get("http://localhost:3000/registro", function(data){
-      cuentas = data.response;
-    });
-
-    $('#crearCuenta').on('submit', function (event) {
-          event.preventDefault();
-
-          idNuevo =  Object.keys(cuentas).length;
-          nick = $("#InputNick").val();
-          email = $("#inputEmail").val();
-
-          if(existeCuenta(nick, email) == 0){
-            $.ajax({
-              url: 'http://localhost:3000/registro',
-              type: 'POST',
-              data: {
-                id : idNuevo+1,
-                name: $("#inputNombre").val(),
-                surname: $("#inputApellido").val(),
-                nickname: nick,
-                email: email,
-                password: $("#inputPassword").val(),
-              },
-
-              success: function(result) {
-                alert("Te has registrado correctamente")
-                location.reload();
-              }
-            });
-          }else{
-            alert("ya existe esa cuenta");
-          }
+    function existeCuenta(nick, email){
+      return cuentas.filter(function (i){
+        if(i.nickname == nick || i.email == email)
+          return 1;
       });
-  });
-</script>
+    }
+    
+    $(document).ready(function(){
+
+      $.get("http://localhost:3000/registro", function(data){
+        cuentas = data.response;
+      });
+      
+      // Al intentar registrarse
+      $('#crearCuenta').on('submit', function (event) {
+            event.preventDefault();
+
+            // Guarda los datos en un array
+            let datos = [];
+            datos.push($("#InputNick").val());
+            datos.push($("#inputEmail").val());
+            datos.push($("#inputNombre").val());
+            datos.push($("#inputApellido").val());
+            datos.push($("#inputPassword").val());
+            
+            // Verifica que todos los campos no sean nulos
+            for(var i = 0; i < 5; i++){
+              if(textoVacio(datos[i]))
+                return alert("Rellena todos los campos")
+            }
+
+            // Verifica la existencia de la cuenta mediante el nombre y email
+            if(existeCuenta(datos[0], datos[1]) == 0){
+              $.ajax({
+                url: 'http://localhost:3000/registro',
+                type: 'POST',
+                data: {
+                  id : Object.keys(cuentas).length+1,
+                  name: datos[0],
+                  surname: datos[1],
+                  nickname: datos[2],
+                  email: datos[3],
+                  password: datos[4],
+                },
+                success: function(result) {
+                  alert("Te has registrado correctamente")
+                  location.reload();
+                }
+              });
+            }else
+              alert("ya existe esa cuenta");
+        });
+    });
+  </script>
+
+</html>
