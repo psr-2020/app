@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesheets/acceder.css">
 
-        <!-- JS, Popper.js, and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -17,46 +15,40 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+  <nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
-  
-    <div class="collapse nav-tabs navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Juegos</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reseñas </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Más recientes</a>
-            <a class="dropdown-item" href="#">Populares</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Juegos</a>
-          </div>
-        </li>
-      </ul>
-
-      <form class="form-inline my-2 my-lg-0">
-        <a href="acceder.html" class="btn btn-outline-success mr-sm-2">Acceder</a>
-        <a href="registro.html" class="btn btn-outline-info my-2 my-sm-0">Registrar</a>
-      </form>
-
-    </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link active" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Juegos</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reseñas
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Más recientes</a>
+          <a class="dropdown-item" href="#">Populares</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Menos valoradas</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a href="acceder.html" class="btn btn-outline-success mr-sm-2">Acceder</a>
+      <a href="registro.html" class="btn btn-outline-info my-2 my-sm-0">Registrar</a>
+    </form>
   </nav>
-
-
 
     <div id="page-content">
       <div class="container text-left">
         <div class="row justify-content-left">
         
           <div class="col-sm-5">
-            <h1 class="display-4 text-center">Accede y postea tus Reseñas</h1>
-            <p class="lead text-center"> Entra y interactua con nuestra comunidad </p>
+            <h1 class="display-4 text-center text-white">Accede y postea tus Reseñas</h1>
+            <p class="lead text-center text-white"> Entra y interactua con nuestra comunidad </p>
           </div>
           
           <div class="col-sm-1">
@@ -65,25 +57,26 @@
           <div class="col-sm-5">
             <form id='accederCuenta'>
                 <div class="form-group">
-                  <label for="email">Nombre de usuario o email</label>
+                  <label for="email" class="text-white"> Nombre de usuario o email</label>
                   <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp" placeholder="hola123 o ej@yo.com">
                 </div>
                 <div class="form-group">
-                  <label for="password">Contraseña</label>
+                  <label for="password" class="text-white">Contraseña</label>
                   <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Recordar</label>
+                  <label class="form-check-label text-white" for="exampleCheck1">Recordar</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Acceder</button>
+                <hr>
+                <button type="submit" class="btn btn-success">Acceder</button>
               </form>
           </div>
         </div>
       </div>
     </div>
 
-    <footer id="sticky-footer" class="py-4 bg-white text-dark">
+    <footer id="sticky-footer" class="py-4 text-white" = style="background-color: black;">
       <div class="container text-center">
         <small>Copyright &copy; El Rincón Del Gaming</small>
       </div>
