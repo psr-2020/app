@@ -1,6 +1,6 @@
 [
     {
-        "id" : "1",
+        "id" : 1,
         "name" : "Erick",
         "surname" : "Quispe",
         "password" : "hola",
@@ -8,7 +8,7 @@
         "email" : "hola2@hotmail.com"
     },
     {
-        "id" : "2",
+        "id" : 2,
         "name" : "Manuel",
         "surname" : "Cabral",
         "password" : "hola2",

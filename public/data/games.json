@@ -7,9 +7,9 @@
         "idioma" : "ingles y espanol",
         "cooperativo" : false,
         "descripcion" : "Es un juego que nos trasladará a una época convulsa en la cronología de Star Wars, invita a encarnar a un Jedi que ha permanecido oculto a la exterminación de su religión tras la Orden 66. Nuestra misión será la de sobrevivir al recién fundado Imperio Galáctico, combatiendo contra los Inquisidores y descubriendo más de la fragmentada y proscrita Orden Jedi.",
-        "votos-positivos" : "0",
-        "votos-negativos" : "0",
-        "promedio" : "0"
+        "votos-positivos" : 0,
+        "votos-negativos" : 0, 
+        "promedio" : 0
     },
     { 
         "nombre" : "Resident Evil 2 Remake",
@@ -19,9 +19,9 @@
         "idioma" : "ingles y espanol",
         "cooperativo" : false,
        "descripcion" : "Resident Evil 2 Remake es la puesta al día del clásico original, Supone un cambio de perspectiva jugable, de estilo de juego y de ambientación, un concepto muy ambicioso desde el plano técnico y artístico pero que mantendrá la esencia del emblemático videojuego que marcó un antes y un después.",
-       "votos-positivos" : "0",
-       "votos-negativos" : "0",
-       "promedio" : "0"
+       "votos-positivos" : 0,
+       "votos-negativos" : 0,
+       "promedio" : 0
 
     }
 ]

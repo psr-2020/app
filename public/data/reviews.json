@@ -2,24 +2,25 @@
     {
         "id" : "1",
         "autor" : "Erick",
-        "juego":"Star Wars Jedi Fallen Order",
+        "juego": 1,
         "descripcion" : "hola", 
-        "day" : "4",
-        "month" : "3",
-        "year" : "2020",
-        "likes" : "0",
-        "dislikes": "0", 
+        "day" : 4,
+        "month" : 3,
+        "year" : 2020,
+        "likes" : 0,
+        "dislikes": 0, 
         "imagen" : "https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"
     },
     {
-        "id" : "2",
+        "id" : 2,
         "autor" : "manu",
+        "juego" : 2,
         "descripcion" : "hola2",
-        "day" : "4",
-        "month" : "3",
-        "year" : "2020",
-        "likes" : "0", 
-        "dislikes": "0",
+        "day" : 4,
+        "month" : 3,
+        "year" : 2020,
+        "likes" : 0, 
+        "dislikes": 0,
         "imagen" : "https://images2.alphacoders.com/985/thumb-1920-985249.png"
     }
 ]
