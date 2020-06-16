@@ -1,12 +1,26 @@
 [
     {
         "id" : "1",
-        "nombre" : "Erick",
-        "descripcion" : "hola"
+        "autor" : "Erick",
+        "juego":"Star Wars Jedi Fallen Order",
+        "descripcion" : "hola", 
+        "day" : "4",
+        "month" : "3",
+        "year" : "2020",
+        "likes" : "0",
+        "dislikes": "0", 
+        "imagen" : "https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"
     },
     {
         "id" : "2",
-        "nombre" : "manu",
-        "descripcion" : "hola2"
+        "autor" : "manu",
+        "descripcion" : "hola2",
+        "day" : "4",
+        "month" : "3",
+        "year" : "2020",
+        "likes" : "0", 
+        "dislikes": "0",
+        "imagen" : "https://images2.alphacoders.com/985/thumb-1920-985249.png"
     }
 ]
+
