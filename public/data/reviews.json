@@ -2,8 +2,8 @@
     {
         "id" : "1",
         "autor" : "Erick",
-        "juego": 1,
-        "descripcion" : "hola", 
+        "idJuego": 0,
+        "descripcion" : "El mejor juego de Star Wars hasta el momento, con grandes mapas para explorar, buena historia introductoria de un personaje nuevo (Cal Kestis), con algunos bugs que se pueden pulir pero un juegazo.", 
         "day" : 4,
         "month" : 3,
         "year" : 2020,
@@ -14,8 +14,8 @@
     {
         "id" : 2,
         "autor" : "manu",
-        "juego" : 2,
-        "descripcion" : "hola2",
+        "idJuego" : 1,
+        "descripcion" : "Un remake bien logrado, combinando el terror de la version anterior del juego con los graficos actuales, juegazo.pm",
         "day" : 4,
         "month" : 3,
         "year" : 2020,

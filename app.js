@@ -8,7 +8,9 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var registroRouter = require('./routes/registro');
-var accederRouter = require('./routes/acceder')
+var accederRouter = require('./routes/acceder');
+var reviewsRouter = require('./routes/reviews');
+var gamesRouter = require('./routes/games');
 
 var app = express();
 
@@ -21,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/registro', registroRouter);
-app.use('/acceder',accederRouter)
+app.use('/acceder', accederRouter);
+app.use('/reviews', reviewsRouter);
+app.use('/games', gamesRouter);
 
 module.exports = app;
