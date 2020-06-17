@@ -1,12 +1,14 @@
 body{
   background: rgb(0,0,0);
   background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,24,47,1) 100%);
+  box-shadow: 0 0 80px -10px black; 
 }
 
 #page-content{
   height: 86.5vh;
   padding-top: 5%;
 }
+
 
 .nota{
   padding-top: 20px;
