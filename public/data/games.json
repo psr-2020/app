@@ -23,5 +23,56 @@
        "votos-negativos" : 0,
        "promedio" : 0
 
+    },
+    
+    { 
+        "nombre" : "Devil May Cry 5",
+        "desarrollador" : "Capcom",
+        "fecha de lanzamiento" : "7 de marzo de 2019",
+        "genero" : "accion",
+        "idioma" : "ingles y espanol",
+        "cooperativo" : false,
+        "descripcion" : "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
+        "votos-positivos" : 0,
+        "votos-negativos" : 0,
+        "promedio" : 0
+
+    },
+
+    {
+     
+        "nombre" : "Devil May Cry 5",
+        "desarrollador" : "Capcom",
+        "fecha de lanzamiento" : "7 de marzo de 2019",
+        "genero" : "accion",
+        "idioma" : "ingles y espanol",
+        "cooperativo" : false,
+        "descripcion" : "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
+        "votos-positivos" : 0,
+        "votos-negativos" : 0,
+        "promedio" : 0
+
+    },
+
+    {
+     
+        "nombre" : "Mortal Kombat 11",
+        "desarrollador" : "NetherRealm Studios",
+        "fecha de lanzamiento" : "7 de marzo de 2019",
+        "genero" : "accion",
+        "idioma" : "ingles y espanol",
+        "cooperativo" : false,
+        "descripcion" : "Se trata de la undécima secuela de una serie de títulos de combate y peleas de marcada estructura 2D, que en esta ocasión, además de añadir los mejores gráficos de la serie y el gore más descarnado en los llamados Fatality, presentará luchadores clásicos y nuevos, más modos de juego. ",
+        "votos-positivos" : 0,
+        "votos-negativos" : 0,
+        "promedio" : 0
+
     }
+
+
+
+
+
+
+
 ]
