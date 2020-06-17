@@ -94,6 +94,11 @@
           return 1;
       });
     }
+
+    function textoVacio(str){
+      return (!str || 0 === str.length);
+    }
+    
     $(document).ready(function(){
         $.get("http://localhost:3000/acceder", function(data){
         cuentas = data.response;
@@ -102,6 +107,12 @@
             event.preventDefault();
             usuario=$('#inputNickAndEmail').val();
             password=$('#inputPassword').val();
+            if(textoVacio(usuario)){
+              alert('completa el usuario');
+            }
+            if (textoVacio(password)){
+              alert('falta la contraseña');
+            }
             if(existeCuenta(usuario,password) != 0){
                 alert('bienvenido '+usuario);
             }

@@ -1,4 +1,5 @@
 # app
-Necesario para iniciar
+Necesario para utilizar
 - npm install
 - npm start
+- abrir /public/html/inicio.html
