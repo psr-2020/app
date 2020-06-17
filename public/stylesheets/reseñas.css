@@ -7,6 +7,10 @@ hr{
     height: 10vh;
 }
 
+.row{
+  box-shadow: 0 0 80px -10px black;
+}
+
 .botones{
     padding-top: 20px;
     padding-left: 150px;
