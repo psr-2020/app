@@ -18,8 +18,8 @@
   <nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Juegos</a>
@@ -58,7 +58,7 @@
             <form id='accederCuenta'>
                 <div class="form-group">
                   <label for="email" class="text-white"> Nombre de usuario o email</label>
-                  <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp" placeholder="hola123 o ej@yo.com">
+                  <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp" placeholder="hola123 o ejemplo@gmail.com">
                 </div>
                 <div class="form-group">
                   <label for="password" class="text-white">Contraseña</label>
@@ -76,10 +76,17 @@
       </div>
     </div>
 
-    <footer id="sticky-footer" class="py-4 text-white" = style="background-color: black;">
-      <div class="container text-center">
-        <small>Copyright &copy; El Rincón Del Gaming</small>
+    <footer class="mb-6 px-3 text-white text-center alt-text-small">
+      <div class="col-md-6 mx-auto text-center text-gray-lighter">
+        <section class="items">
+          <nav class="main-nav">
+            <a href="#"><span data-hover="FAQ">FAQ</span></a>
+            <a href="#"><span data-hover="Terminos">Terminos</span></a>
+            <a href="#"><span data-hover="Contacto">Contacto</span></a>
+          </nav>
+        </section>
       </div>
+      <p class="nota"> © 2020 El Rincón Del Gaming</p>
     </footer>
 
 </body>
@@ -88,26 +95,44 @@
 
     cuentas = [];
   
-    function existeCuenta(nickEmail,password){
+    function getAccounts(){
+      $.get("http://localhost:3000/cuentas", function(data){
+        cuentas = data.response;
+      });
+    }
+
+    function existAccount(nickEmail, password){
+      console.log("verificando " + nickEmail + "verificando >"+ password);
       return cuentas.filter(function (i){
-        if(i.email == nickEmail || i.nickname == nickEmail && i.password == password)
+       
+        if((i.email == nickEmail || i.nickname == nickEmail) && i.password == password)
           return 1;
       });
     }
+
+    function voidText(str){
+      return (!str || 0 === str.length);
+    }
+    
     $(document).ready(function(){
-        $.get("http://localhost:3000/acceder", function(data){
-        cuentas = data.response;
-        });
-        $('#accederCuenta').on('submit', function (event){
-            event.preventDefault();
-            usuario=$('#inputNickAndEmail').val();
-            password=$('#inputPassword').val();
-            if(existeCuenta(usuario,password) != 0){
-                alert('bienvenido '+usuario);
-            }
-            else{
-                alert('no existe este usuario');
-            }
-        });
+
+      getAccounts();
+
+      $('#accederCuenta').on('submit', function (event){
+        event.preventDefault();
+
+        usuario=$('#inputNickAndEmail').val();
+        password=$('#inputPassword').val();
+
+        if(voidText(usuario) || voidText(password)){
+          alert('completa los campos');
+        }
+
+        if(existAccount(usuario, password) != 0){
+            alert('bienvenido '+ usuario);
+        }else{
+          alert('no existe este usuario');
+        }
+      });
     });
   </script>

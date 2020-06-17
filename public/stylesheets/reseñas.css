@@ -7,6 +7,55 @@ hr{
     height: 10vh;
 }
 
+
 .botones{
+    padding-top: 20px;
     padding-left: 150px;
 }
+
+.nota{
+    padding-top: 20px;
+    color: #ddd;
+    font-size: 13px;
+  }
+  
+  .items, .items2{
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  
+  .items a, .items2 a{
+    display:inline-block;
+    color: #ddd;
+    text-transform: uppercase;
+    display:inline-block;
+    text-decoration:none;
+    margin: 0 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
+  .items a span{
+    display: inline-block;
+    position:relative;
+    transition: transform 500ms;
+    -webkit-transition: -webkit-transform 500ms;
+    -moz-transition: transform 500ms;
+    
+  }
+  .items a span:after{
+    content: attr(data-hover);
+    position: absolute;
+    top: -30px;
+    left:0;
+    transform: translate3d(0,0,0);
+      -moz-transform: translate3d(0,0,0);
+      -webkit-transform: translate3d(0,0,0);
+  }
+  .items a:hover span,
+  .items a:focus span {
+      transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+  }
+  
