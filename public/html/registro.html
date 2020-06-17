@@ -115,11 +115,17 @@
 
     cuentas = [];
 
+    function getAccounts(){
+      $.get("http://localhost:3000/cuentas", function(data){
+        cuentas = data.response;
+      });
+    }
+
     function textoVacio(str){
       return (!str || 0 === str.length);
     }
 
-    function existeCuenta(nick, email){
+    function existAccount(nick, email){
       return cuentas.filter(function (i){
         if(i.nickname == nick || i.email == email)
           return 1;
@@ -128,21 +134,18 @@
     
     $(document).ready(function(){
 
-      $.get("http://localhost:3000/registro", function(data){
-        cuentas = data.response;
-      });
-      
-      // Al intentar registrarse
+      getAccounts();
+
       $('#crearCuenta').on('submit', function (event) {
             event.preventDefault();
 
             // Guarda los datos en un array
             let datos = [];
-            datos.push($("#InputNick").val());
-            datos.push($("#inputEmail").val());
-            datos.push($("#inputNombre").val());
-            datos.push($("#inputApellido").val());
-            datos.push($("#inputPassword").val());
+            datos.push($("#inputNombre").val());    //0
+            datos.push($("#inputApellido").val());  //1
+            datos.push($("#inputPassword").val());  //2
+            datos.push($("#InputNick").val());      //3
+            datos.push($("#inputEmail").val());     //4
             
             // Verifica que todos los campos no sean nulos
             for(var i = 0; i < 5; i++){
@@ -150,18 +153,18 @@
                 return alert("Rellena todos los campos")
             }
 
-            // Verifica la existencia de la cuenta mediante el nombre y email
-            if(existeCuenta(datos[0], datos[1]) == 0){
+            // Verifica la existencia de la cuenta mediante el nickname y email
+            if(existAccount(datos[3], datos[4]) == 0){
               $.ajax({
-                url: 'http://localhost:3000/registro',
+                url: 'http://localhost:3000/cuentas',
                 type: 'POST',
                 data: {
                   id : Object.keys(cuentas).length+1,
                   name: datos[0],
                   surname: datos[1],
-                  nickname: datos[2],
-                  email: datos[3],
-                  password: datos[4],
+                  password: datos[2],
+                  nickname: datos[3],
+                  email: datos[4],
                 },
                 success: function(result) {
                   alert("Te has registrado correctamente")

@@ -95,37 +95,44 @@
 
     cuentas = [];
   
-    function existeCuenta(nickEmail,password){
+    function getAccounts(){
+      $.get("http://localhost:3000/cuentas", function(data){
+        cuentas = data.response;
+      });
+    }
+
+    function existAccount(nickEmail, password){
+      console.log("verificando " + nickEmail + "verificando >"+ password);
       return cuentas.filter(function (i){
-        if(i.email == nickEmail || i.nickname == nickEmail && i.password == password)
+       
+        if((i.email == nickEmail || i.nickname == nickEmail) && i.password == password)
           return 1;
       });
     }
 
-    function textoVacio(str){
+    function voidText(str){
       return (!str || 0 === str.length);
     }
     
     $(document).ready(function(){
-        $.get("http://localhost:3000/acceder", function(data){
-        cuentas = data.response;
-        });
-        $('#accederCuenta').on('submit', function (event){
-            event.preventDefault();
-            usuario=$('#inputNickAndEmail').val();
-            password=$('#inputPassword').val();
-            if(textoVacio(usuario)){
-              alert('completa el usuario');
-            }
-            if (textoVacio(password)){
-              alert('falta la contraseña');
-            }
-            if(existeCuenta(usuario,password) != 0){
-                alert('bienvenido '+usuario);
-            }
-            else{
-                alert('no existe este usuario');
-            }
-        });
+
+      getAccounts();
+
+      $('#accederCuenta').on('submit', function (event){
+        event.preventDefault();
+
+        usuario=$('#inputNickAndEmail').val();
+        password=$('#inputPassword').val();
+
+        if(voidText(usuario) || voidText(password)){
+          alert('completa los campos');
+        }
+
+        if(existAccount(usuario, password) != 0){
+            alert('bienvenido '+ usuario);
+        }else{
+          alert('no existe este usuario');
+        }
+      });
     });
   </script>

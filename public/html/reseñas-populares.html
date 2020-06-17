@@ -74,8 +74,22 @@
   reviews = [];
   games = [];
 
-  function addReview(review){
+  function getGames(){
+    $.get("http://localhost:3000/games", function(informacion){
+      games = informacion.respuesta;
+    });
+  };
 
+  function getReviews(){
+    $.get("http://localhost:3000/reviews", function(informacion){
+      reviews = informacion.respuesta;
+      reviews.forEach(function(review){
+        addReview(review);
+      });
+    });
+  }
+
+  function addReview(review){
       $("#Contenido").append(
         '<div class="row featurette">' +
           '<div class="col-md-7 order-md-2">' +
@@ -95,26 +109,15 @@
         '</div>' +
         '<hr>'
       );
-
-  }
+  };
   
   $(document).ready(function(){
 
-    $.get("http://localhost:3000/games", function(informacion){
-      games = informacion.respuesta;
-    });
-
-    $.get("http://localhost:3000/reviews", function(informacion){
-      reviews = informacion.respuesta;
-
-      reviews.forEach(function(review){
-        addReview(review);
-      });
-
-    });
+    getGames();
+    getReviews();
 
   });
-
+  
 </script>
 
 </html>
