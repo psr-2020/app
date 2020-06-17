@@ -41,13 +41,13 @@
 
     {
      
-        "nombre" : "Devil May Cry 5",
-        "desarrollador" : "Capcom",
-        "fecha de lanzamiento" : "7 de marzo de 2019",
+        "nombre" : "Batman Arkham City",
+        "desarrollador" : "Rocksteady",
+        "fecha de lanzamiento" : "21 de septiembre del 2011",
         "genero" : "accion",
         "idioma" : "ingles y espanol",
         "cooperativo" : false,
-        "descripcion" : "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
+        "descripcion" : "La continuación del aclamado Arkham Asylum para PS3 lleva de nuevo a Batman a combatir contra sus peores enemigos, esta vez en medio de un distrito de Gotham convertido en el asilo Arkham. Esta segunda parte cuenta con más libertad de movimiento, pudiendo movernos libremente por las diferentes zonas del juego. Nos enfrentaremos a enemigos como el Joker, Dos Caras, Bane o el Pingüino usando los movimientos de combate de Batman y su extenso repertorio de gadgets.",
         "votos-positivos" : 0,
         "votos-negativos" : 0,
         "promedio" : 0
@@ -68,11 +68,5 @@
         "promedio" : 0
 
     }
-
-
-
-
-
-
 
 ]
