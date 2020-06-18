@@ -1,0 +1,121 @@
+[
+    {   "Nombre": "Star Wars Jedi Fallen Order",
+        "Tipo de Requisito": "MINIMO",
+        "Descripcion" : "Requiere un procesador y un sistema operativo de 64 bits",
+        "SO":"64-bit Windows 7 / 8.1 / 10",
+        "Procesador" : "AMD FX-6100 / Intel i3-3220 o equivalente",
+        "Memoria": "8 GB de RAM",
+        "Gráficos":"AMD Radeon HD 7750, NVIDIA GeForce GTX 650 o equivalente",
+        "DirectX": "Versión 11",
+        "Almacenamiento": " 55 GB de espacio disponible"
+    },
+    {
+        "Tipo de Requisito":"RECOMENDADO",
+        "Descripcion": "Requiere un procesador y un sistema operativo de 64 bits",
+        "SO":"64-bit Windows 7 / 8.1 / 10",
+        "Procesador":"AMD Ryzen 7 1700 / Intel i7-6700k o equivalente",
+        "Memoria":"16 GB de RAM",
+        "Gráficos":"AMD RX Vega 56, Nvidia GTX 1070 / GTX1660Ti o equivalente",
+        "DirectX":"Versión 11",
+        "Almacenamiento":" 55 GB de espacio disponible"
+    },
+    { "Nombre": "Mortal Kombat 11",
+        "Tipo de Requisito": "MINIMO",
+        "SO":"64-bit Windows 7/ Windows 10",
+        "Procesador" : "Intel Core i5-750, 2.66 GHz/ AMD Phenom II X4 965, 3.4 GHz o AMD Ryzen™ 3 1200, 3.1 GHz",
+        "Memoria": "8 GB de RAM",
+        "Gráficos":"NVIDIA® GeForce™ GTX 670 o NVIDIA® GeForce™ GTX 1050 / AMD® Radeon™ HD 7950 o AMD® Radeon™ R9 270",
+        "DirectX": "Versión 11",
+        "Red": "Conexion de banda ancha a internet"
+    },
+    {
+        "Tipo de Requisito": "RECOMENDADO",
+        "SO":"64-bit Windows 7/ Windows 10",
+        "Procesador" : "Intel Core i5-2300, 2.8 GHz / AMD FX-6300, 3.5GHz",
+        "Memoria": "8 GB de RAM",
+        "Gráficos":"NVIDIA® GeForce™ GTX 780 o NVIDIA® GeForce™ GTX 1060-6GB / AMD® Radeon™ R9 290 o RX 570",
+        "DirectX": "Versión 11",
+        "Red": "Conexion de banda ancha a internet"    
+    },
+    {
+        "Nombre": "Resident Evil 2 Remake",
+        "Tipo de Requisito": "MINIMO",
+        "Descripcion" : "Requiere un procesador y un sistema operativo de 64 bits",
+        "SO":"WINDOWS® 7, 8.1, 10 (64-BIT Necesario)",
+        "Procesador" : "Intel® Core™ i5-4460 o AMD FX™-6300 o mejor",
+        "Memoria": "8 GB de RAM",
+        "Gráficos":"NVIDIA® GeForce™ GTX 670 o AMD Radeon™ R7 260x con 2GB Video RAM",
+        "DirectX": "Versión 11",
+        "Almacenamiento": "26 GB de espacio disponible"
+    },
+    {
+        "Tipo de Requisito": "RECOMENDADO",
+        "Descripcion" : "Requiere un procesador y un sistema operativo de 64 bits",
+        "SO":"WINDOWS® 7, 8.1, 10 (64-BIT Necesario)",
+        "Procesador" : "Intel® Core™ i7-3770 o AMD FX™-9590 o mejor",
+        "Memoria": "8 GB de RAM",
+        "Gráficos":"NVIDIA® GeForce® GTX 1060 o AMD Radeon™ RX 480 con 3GB VRAM",
+        "DirectX": "Versión 11",
+        "Almacenamiento": "26 GB de espacio disponible"
+    },
+   {
+    "Nombre": "Devil May Cry 5",
+    "Tipo de Requisito": "MINIMO",
+    "SO":"WINDOWS® 7, 8.1, 10 (64-BIT Necesario)",
+    "Procesador" :"Intel® Core™ i5-4460, AMD FX™-6300, o mejor",
+    "Memoria": "8 GB de RAM",
+    "Gráficos":"NVIDIA® GeForce® GTX 760 o AMD Radeon™ R7 260x con 2GB Video RAM, o mejor",
+    "DirectX": "Versión 11",
+    "Almacenamiento":"35 GB de espacio disponible"
+},
+{
+    "Tipo de Requisito": "RECOMENDADO",
+    "SO":"WINDOWS® 7, 8.1, 10 (64-BIT Necesario)",
+    "Procesador" : "Intel® Core™ i7-3770, AMD FX™-9590, o mejor",
+    "Memoria": "8 GB de RAM",
+    "Gráficos":"NVIDIA® GeForce® GTX 1060 con 6GB VRAM, AMD Radeon™ RX 480 con 8GB VRAM, o mejor",
+    "DirectX": "Versión 11"
+    }
+
+]
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
