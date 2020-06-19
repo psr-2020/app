@@ -22,5 +22,27 @@
         "likes" : 0, 
         "dislikes": 0,
         "imagen" : "https://images2.alphacoders.com/985/thumb-1920-985249.png"
+    },
+    {
+        "id" : 3,
+        "autor" : "melanie",
+        "idJuego" : 2,
+        "descripcion" : "Un juego que tiene mucho estilo, sus mecanicas de juego nunca casan y sus personajes son muy entretenidos.pm",
+        "day" : 6,
+        "month" : 7,
+        "year" : 2019,
+        "likes" : 0, 
+        "dislikes": 0,
+        "imagen" : "https://images6.alphacoders.com/926/926723.jpg"
+
+
     }
+
+      
+
+
+
+
+
+
 ]
