@@ -17,12 +17,13 @@
 
   <nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
+    
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link active" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Juegos</a>
+        <a class="nav-link" href="juegos.html">Juegos</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,17 +45,40 @@
 
   <div id="titulo">
     <div class="container" style="margin-top: 3%;">
-      <h1 class="display-4 text-white">Explora nuestras reseñas más recientes</h1>
-      <br>
-      <input id="search" type="text" class="search-field" placeholder="buscar">
+      <h1 class="display-4 text-white text-center">Reseñas más recientes</h1>
+      <p class="display-5 text-muted text-center">
+        Explora las reseñas mas recientes hechos por nuestra comunidad
+      </p>
+      <div class="container">
+        <div class="d-flex justify-content-center " >    
+         <div class="col-md-7">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button id ="dpBuscar" class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Busqueda</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Autores</a>
+                <a class="dropdown-item" href="#">Nombre de juego</a>
+              </div>
+            </div>
+            <input type="text" id="busqueda" class="form-control bg-transparent text-white" aria-label="Text input with dropdown button" placeholder="">
+            <span class="input-group-btn">
+              <button class="btn btn-success" type="button">
+                <span id="buscarReseña" class="glyphicon glyphicon-search">Buscar</span>
+              </button>
+            </span>
+          </div>
+         </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <hr>
+  <br>
 
-  <div id= "Contenido"class="container" >
-
+  <div id= "Contenido" class="container" >
+    <hr>
   </div>
+
 
   <footer class="mb-6 px-3 text-white text-center alt-text-small">
     <div class="col-md-6 mx-auto text-center text-gray-lighter">
@@ -75,51 +99,137 @@
 
   reviews = [];
   games = [];
+  tipoBusqueda = "";
 
-  function getGames(){
-    $.get("http://localhost:3000/games", function(informacion){
+  function getGames() {
+    $.get("http://localhost:3000/games", function (informacion) {
       games = informacion.respuesta;
     });
   };
 
-  function getReviews(){
-    $.get("http://localhost:3000/reviews", function(informacion){
+  function getReviews() {
+    $.get("http://localhost:3000/reviews", function (informacion) {
       reviews = informacion.respuesta;
-      reviews.forEach(function(review){
-        addReview(review);
-      });
+
+      reviews.forEach(function (review) {
+          addReview(review);
+        });
     });
   }
 
-  function addReview(review){
-      $("#Contenido").append(
-        '<div class="row featurette">' +
-          '<div class="col-md-7 order-md-2">' +
-            '<h2 class="featurette-heading text-white ">' + games[review.idJuego].nombre + '</h2>' +
-            '<h5 class="text-dark">' + review.autor + ', ' + review.day + '/' + review.month + '/'+ review.year + '</h5>' +
-            '<p class="lead text-white">' + review.descripcion + '</p>' +
-          '</div>' +
-          '<div class="col-md-5 order-md-1">' +
-            '<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="350" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">' +
-              '<image href="' + review.imagen + '" height="400" width="350"/>' +
-            '</svg>' +
-            '<div class="botones">' +
-                '<button type="button" class="btn btn-outline-success">Like</button>' +
-                '<button type="button" class="btn btn-outline-danger">Dislike</button>' +
-            '</div>' +
+  function mostrarNotFound(text){
+    $("#Contenido").append(
+      '<div id="contenido">' + 
+        '<div class="container" style="margin-top: 3%;">' +
+          '<h1 class="display-3 text-muted text-center">Oops!</h1>' +
+          '<p class="lead text-white text-center">' + text + '</p>' +
           '</div>' +
         '</div>' +
-        '<hr>'
+        '<hr><hr>'
+    );
+  }
+
+  function likeReview(idReview){
+    $.ajax({
+      url: 'http://localhost:3000/reviews/like/' + idReview,
+      type: 'PUT',
+      success: function(result) {
+        $("#Contenido").html("");
+        getReviews();
+      }
+    });
+  }
+
+  function dislikeReview(idReview){
+    $.ajax({
+      url: 'http://localhost:3000/reviews/dislike/' + idReview,
+      type: 'PUT',
+      success: function(result) {
+        $("#Contenido").html("");
+        getReviews();
+      }
+    });
+  }
+  
+  function addReview(review){
+      $("#Contenido").append(
+        '<div class="row d-flex justify-content-center">' +
+          '<img  class="col-md-4" src="'+ games[review.idJuego].imagen + '" width="450" alt="" srcset="">' +
+          '<div class="col-md-8 bg-secundary">' +
+            '<h2 class="text-white text-left ">' + games[review.idJuego].nombre + '</h2>' +
+            '<h5 class="text-dark text-left">' + review.autor + ', ' + review.day + '/' + review.month + '/'+ review.year + '</h5>' +
+            '<p class = "lead text-white">' + review.descripcion + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="row">' +
+          '<div class="col-md-4 text-center">' +
+          '<br>' +
+          '<button type="button" onclick="likeReview('+ review.id +')" class="btn btn-outline-success"> <span class="text-muted">' + review.likes + '</span> Me gusta</button>' +
+          '&nbsp;&nbsp;'+
+          '<button type="button" onclick="dislikeReview('+ review.id +')"class="btn btn-outline-danger"> <span class="text-muted">' + review.dislikes + '</span> No me gusta </button>' +
+        '</div>' +
+        '</div>' +
+        '<hr>' 
       );
   };
-  
-  $(document).ready(function(){
+
+  function reviewFilter(type, text){
+
+    if(type == "Autores"){
+      return reviews.filter(function (review) {
+        autor = review.autor.toLowerCase();
+        return autor.indexOf(text) !== -1;
+      });
+    }
+
+    if(type == "Nombre de juego"){
+      return reviews.filter(function (review) {
+        nombreJuego = games[review.idJuego].nombre.toLowerCase()
+        return nombreJuego.indexOf(text) !== -1;
+      });
+    }
+  }
+
+  function textoVacio(str){
+    return (!str || 0 === str.length);
+  }
+
+  $(document).ready(function () {
 
     getGames();
     getReviews();
 
+    $("#busqueda").change(function (){
+
+      textoEnBusqueda = $("#busqueda").val().toLowerCase();
+      $("#Contenido").html("<hr>");
+
+      if (/^ *$/.test(textoEnBusqueda) || /^ *$/.test(tipoBusqueda)) {
+        return getReviews();
+      } 
+
+      reviewsEncontrados = reviewFilter(tipoBusqueda, textoEnBusqueda);
+      
+      if(reviewsEncontrados.length == 0)
+        mostrarNotFound("No se encontrarón reseñas.");
+      else{
+        reviewsEncontrados.forEach(function (review){
+          addReview(review);
+        });
+      }
+    });
+
+    
+    $('.input-group-prepend').find('a').click(function(e){
+			e.preventDefault();
+			
+      tipoBusqueda = $(this).text();
+			$('#dpBuscar').text(tipoBusqueda);
+		});
+    
   });
-  
+
+
 </script>
 
 </html>

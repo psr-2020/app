@@ -1,12 +1,18 @@
 body{
-    background: rgb(0,0,0);
-    background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,24,47,1) 100%);
-  }
+  min-height: 100vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background: rgb(0,0,0);
+  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,24,47,1) 100%);
+}
+
+footer{
+  padding: 0;
+}
 
 hr{
     height: 10vh;
 }
-
 
 .botones{
     padding-top: 20px;

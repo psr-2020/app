@@ -9,7 +9,8 @@
         "descripcion" : "Es un juego que nos trasladará a una época convulsa en la cronología de Star Wars, invita a encarnar a un Jedi que ha permanecido oculto a la exterminación de su religión tras la Orden 66. Nuestra misión será la de sobrevivir al recién fundado Imperio Galáctico, combatiendo contra los Inquisidores y descubriendo más de la fragmentada y proscrita Orden Jedi.",
         "votos-positivos" : 0,
         "votos-negativos" : 0, 
-        "promedio" : 0
+        "promedio" : 0,
+        "imagen" : "https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"
     },
     { 
         "nombre" : "Resident Evil 2 Remake",
@@ -21,7 +22,8 @@
        "descripcion" : "Resident Evil 2 Remake es la puesta al día del clásico original, Supone un cambio de perspectiva jugable, de estilo de juego y de ambientación, un concepto muy ambicioso desde el plano técnico y artístico pero que mantendrá la esencia del emblemático videojuego que marcó un antes y un después.",
        "votos-positivos" : 0,
        "votos-negativos" : 0,
-       "promedio" : 0
+       "promedio" : 0,
+       "imagen" : "https://images2.alphacoders.com/985/thumb-1920-985249.png"
 
     },
     
@@ -35,7 +37,8 @@
         "descripcion" : "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
         "votos-positivos" : 0,
         "votos-negativos" : 0,
-        "promedio" : 0
+        "promedio" : 0,
+        "imagen" : "https://images6.alphacoders.com/926/926723.jpg"
 
     },
 

@@ -10,5 +10,18 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.put('/:accion/:id', function(req, res, next) {
+
+  var idBuscado = parseInt(req.params.id, 10);
+  var accion = req.params.accion;
+
+  if(accion == "like") reviews[idBuscado].likes++;
+  else reviews[idBuscado].dislikes++;
+
+  res.send({
+    status : true
+  });
+});
+
 
 module.exports = router;
