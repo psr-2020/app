@@ -19,8 +19,8 @@
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
     
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link active" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="juegos.html">Juegos</a>
@@ -30,7 +30,7 @@
           Reseñas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="reseñas-recientes.html">Más recientes</a>
+          <a class="dropdown-item active" href="reseñas-recientes.html">Más recientes</a>
           <a class="dropdown-item" href="reseñas-populares.html">Populares</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Menos valoradas</a>
@@ -108,12 +108,19 @@
   };
 
   function getReviews() {
-    $.get("http://localhost:3000/reviews", function (informacion) {
-      reviews = informacion.respuesta;
+    $.ajax({
+      url: "http://localhost:3000/reviews",
+      type: "GET",
+      error: function(){ 
+        mostrarNotFound("El sistema se encuentra desactivado.")
+      },
+      success: function(informacion){
+        reviews = informacion.respuesta;
 
-      reviews.forEach(function (review) {
+        reviews.forEach(function (review) {
           addReview(review);
         });
+      }
     });
   }
 

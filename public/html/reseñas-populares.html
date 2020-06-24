@@ -19,8 +19,8 @@
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
     
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link active" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="juegos.html">Juegos</a>
@@ -31,7 +31,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="reseñas-recientes.html">Más recientes</a>
-          <a class="dropdown-item" href="reseñas-populares.html">Populares</a>
+          <a class="dropdown-item active" href="reseñas-populares.html">Populares</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Menos valoradas</a>
         </div>
@@ -108,16 +108,23 @@
   };
 
   function getReviews() {
-    $.get("http://localhost:3000/reviews", function (informacion) {
-      reviews = informacion.respuesta;
-    
-      if(hayReviewsPopulares()){
-        reviews.forEach(function (review) {
-          if(review.likes > 0 || review.dislikes > 0)
-            addReview(review);
-        });
-      }else
-        mostrarNotFound("No se encontraron reseñas populares.");
+    $.ajax({
+      url: "http://localhost:3000/reviews",
+      type: "GET",
+      error: function(){ 
+        mostrarNotFound("El sistema se encuentra desactivado.")
+      },
+      success: function(informacion){
+        reviews = informacion.respuesta;
+
+        if(hayReviewsPopulares() != 0){
+          reviews.forEach(function (review) {
+            if(review.likes > 0 || review.dislikes > 0)
+              addReview(review);
+          });
+        }else
+          mostrarNotFound("No se encontraron reseñas populares.");
+      }
     });
   }
 
