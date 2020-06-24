@@ -151,8 +151,8 @@
       url: 'http://localhost:3000/reviews/like/' + idReview,
       type: 'PUT',
       success: function(result) {
-        $("#Contenido").html("");
-        getReviews();
+        reviews = result.respuesta;
+        $("#like" + idReview).text(reviews[idReview].likes + " Me gusta");
       }
     });
   }
@@ -162,8 +162,8 @@
       url: 'http://localhost:3000/reviews/dislike/' + idReview,
       type: 'PUT',
       success: function(result) {
-        $("#Contenido").html("");
-        getReviews();
+        reviews = result.respuesta;
+        $("#dislike" + idReview).text(reviews[idReview].dislikes + " No me gusta");
       }
     });
   }
@@ -181,9 +181,9 @@
         '<div class="row">' +
           '<div class="col-md-4 text-center">' +
           '<br>' +
-          '<button type="button" onclick="likeFunction('+ review.id +')" class="btn btn-outline-success"> <span class="text-muted">' + review.likes + '</span> Me gusta</button>' +
+          '<button type="button" id="like' + review.id + '" onclick="likeReview('+ review.id +')" class="btn btn-outline-success"> <span class="text-muted">' + review.likes + '</span> Me gusta</button>' +
           '&nbsp;&nbsp;'+
-          '<button type="button" onclick="dislikeFunction('+ review.id +')"class="btn btn-outline-danger"> <span class="text-muted">' + review.dislikes + '</span> No me gusta </button>' +
+          '<button type="button" id="dislike' + review.id + '" onclick="dislikeReview('+ review.id +')"class="btn btn-outline-danger"> <span class="text-muted">' + review.dislikes + '</span> No me gusta </button>' +
         '</div>' +
         '</div>' +
         '<hr>' 

@@ -19,7 +19,8 @@ router.put('/:accion/:id', function(req, res, next) {
   else reviews[idBuscado].dislikes++;
 
   res.send({
-    status : true
+    status : true,
+    respuesta : reviews
   });
 });
 
