@@ -10,11 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
+    
+    <script src="../scripts/support.js"></script>
+    <script src="../scripts/accounts.js"></script>
+    <script src="../scripts/registro.js"></script>
+    
     <title>Registrar</title>
+
 </head>
 <body>
-
   
   <nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
@@ -112,72 +116,6 @@
     </footer>
 
 </body>
-  <script>
-
-    cuentas = [];
-
-    function getAccounts(){
-      $.get("http://localhost:3000/cuentas", function(data){
-        cuentas = data.response;
-      });
-    }
-
-    function textoVacio(str){
-      return (!str || 0 === str.length);
-    }
-
-    function existAccount(nick, email){
-      return cuentas.filter(function (i){
-        if(i.nickname == nick || i.email == email)
-          return 1;
-      });
-    }
-    
-    $(document).ready(function(){
-
-      getAccounts();
-
-      $('#crearCuenta').on('submit', function (event) {
-            event.preventDefault();
-
-            // Guarda los datos en un array
-            let datos = [];
-            datos.push($("#inputNombre").val());    //0
-            datos.push($("#inputApellido").val());  //1
-            datos.push($("#inputPassword").val());  //2
-            datos.push($("#InputNick").val());      //3
-            datos.push($("#inputEmail").val());     //4
-            
-            // Verifica que todos los campos no sean nulos
-            for(var i = 0; i < 5; i++){
-              if(textoVacio(datos[i]))
-                return alert("Rellena todos los campos")
-            }
-
-            // Verifica la existencia de la cuenta mediante el nickname y email
-            if(existAccount(datos[3], datos[4]) == 0){
-              $.ajax({
-                url: 'http://localhost:3000/cuentas',
-                type: 'POST',
-                data: {
-                  id : Object.keys(cuentas).length+1,
-                  name: datos[0],
-                  surname: datos[1],
-                  password: datos[2],
-                  nickname: datos[3],
-                  email: datos[4],
-                },
-                success: function(result) {
-                  alert("Te has registrado correctamente")
-                  location.reload();
-                }
-              });
-            }else
-              alert("ya existe esa cuenta");
-        });
-    });
-  </script>
-
 </html>
 
 

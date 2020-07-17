@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../stylesheets/acceder.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  
-    <title>Acceder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/acceder.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <script src="../scripts/support.js"></script>
+  <script src="../scripts/accounts.js"></script>
+  <script src="../scripts/login.js"></script>
+
+  <title>Acceder</title>
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark" style = "background-color: #00182f;">
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
-    
+
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
@@ -26,7 +37,8 @@
         <a class="nav-link" href="juegos.html">Juegos</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           Reseñas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,97 +55,54 @@
     </form>
   </nav>
 
-    <div id="page-content">
-      <div class="container text-left">
-        <div class="row justify-content-left">
-        
-          <div class="col-sm-5">
-            <h1 class="display-4 text-center text-white">Accede y postea tus Reseñas</h1>
-            <p class="lead text-center text-white"> Entra y interactua con nuestra comunidad </p>
-          </div>
-          
-          <div class="col-sm-1">
-          </div>
-        
-          <div class="col-sm-5">
-            <form id='accederCuenta'>
-                <div class="form-group">
-                  <label for="email" class="text-white"> Nombre de usuario o email</label>
-                  <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp" placeholder="hola123 o ejemplo@gmail.com">
-                </div>
-                <div class="form-group">
-                  <label for="password" class="text-white">Contraseña</label>
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label text-white" for="exampleCheck1">Recordar</label>
-                </div>
-                <hr>
-                <button type="submit" class="btn btn-success">Acceder</button>
-              </form>
-          </div>
+  <div id="page-content">
+    <div class="container text-left">
+      <div class="row justify-content-left">
+
+        <div class="col-sm-5">
+          <h1 class="display-4 text-center text-white">Accede y postea tus Reseñas</h1>
+          <p class="lead text-center text-white"> Entra y interactua con nuestra comunidad </p>
+        </div>
+
+        <div class="col-sm-1">
+        </div>
+
+        <div class="col-sm-5">
+          <form id='accederCuenta'>
+            <div class="form-group">
+              <label for="email" class="text-white"> Nombre de usuario o email</label>
+              <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp"
+                placeholder="hola123 o ejemplo@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="password" class="text-white">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label text-white" for="exampleCheck1">Recordar</label>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Acceder</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer class="mb-6 px-3 text-white text-center alt-text-small">
-      <div class="col-md-6 mx-auto text-center text-gray-lighter">
-        <section class="items">
-          <nav class="main-nav">
-            <a href="#"><span data-hover="FAQ">FAQ</span></a>
-            <a href="#"><span data-hover="Terminos">Terminos</span></a>
-            <a href="#"><span data-hover="Contacto">Contacto</span></a>
-          </nav>
-        </section>
-      </div>
-      <p class="nota"> © 2020 El Rincón Del Gaming</p>
-    </footer>
+  <footer class="mb-6 px-3 text-white text-center alt-text-small">
+    <div class="col-md-6 mx-auto text-center text-gray-lighter">
+      <section class="items">
+        <nav class="main-nav">
+          <a href="#"><span data-hover="FAQ">FAQ</span></a>
+          <a href="#"><span data-hover="Terminos">Terminos</span></a>
+          <a href="#"><span data-hover="Contacto">Contacto</span></a>
+        </nav>
+      </section>
+    </div>
+    <p class="nota"> © 2020 El Rincón Del Gaming</p>
+  </footer>
 
 </body>
+
 </html>
-<script>
-
-    cuentas = [];
-  
-    function getAccounts(){
-      $.get("http://localhost:3000/cuentas", function(data){
-        cuentas = data.response;
-      });
-    }
-
-    function existAccount(nickEmail, password){
-      console.log("verificando " + nickEmail + "verificando >"+ password);
-      return cuentas.filter(function (i){
-       
-        if((i.email == nickEmail || i.nickname == nickEmail) && i.password == password)
-          return 1;
-      });
-    }
-
-    function voidText(str){
-      return (!str || 0 === str.length);
-    }
-    
-    $(document).ready(function(){
-
-      getAccounts();
-
-      $('#accederCuenta').on('submit', function (event){
-        event.preventDefault();
-
-        usuario=$('#inputNickAndEmail').val();
-        password=$('#inputPassword').val();
-
-        if(voidText(usuario) || voidText(password)){
-          alert('completa los campos');
-        }
-
-        if(existAccount(usuario, password) != 0){
-            alert('bienvenido '+ usuario);
-        }else{
-          alert('no existe este usuario');
-        }
-      });
-    });
-  </script>

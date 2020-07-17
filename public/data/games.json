@@ -1,75 +1,65 @@
 [
     {
-        "nombre" : "Star Wars Jedi Fallen Order",
-        "desarrollador" : "Respawn Enterteainment y Electronic Arts",
-        "fecha-lanzamiendo" : "15 de Noviembre del 2019",
-        "genero" : "accion y aventuras",
-        "idioma" : "ingles y español",
-        "cooperativo" : false,
-        "descripcion" : "Es un juego que nos trasladará a una época convulsa en la cronología de Star Wars, invita a encarnar a un Jedi que ha permanecido oculto a la exterminación de su religión tras la Orden 66. Nuestra misión será la de sobrevivir al recién fundado Imperio Galáctico, combatiendo contra los Inquisidores y descubriendo más de la fragmentada y proscrita Orden Jedi.",
-        "votos-positivos" : 0,
-        "votos-negativos" : 0, 
-        "promedio" : 0,
-        "imagen" : "https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"
+        "nombre": "Star Wars Jedi Fallen Order",
+        "desarrollador": "Respawn Enterteainment y Electronic Arts",
+        "fecha-lanzamiendo": "15 de Noviembre del 2019",
+        "genero": "accion y aventuras",
+        "idioma": "ingles y español",
+        "cooperativo": false,
+        "descripcion": "Es un juego que nos trasladará a una época convulsa en la cronología de Star Wars, invita a encarnar a un Jedi que ha permanecido oculto a la exterminación de su religión tras la Orden 66. Nuestra misión será la de sobrevivir al recién fundado Imperio Galáctico, combatiendo contra los Inquisidores y descubriendo más de la fragmentada y proscrita Orden Jedi.",
+        "votos-positivos": 0,
+        "votos-negativos": 0,
+        "promedio": 0,
+        "imagen": "https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"
     },
-    { 
-        "nombre" : "Resident Evil 2 Remake",
-        "desarrollador" : "Capcom",
-        "fecha-lanzamiendo" : "25 de enero de 2019",
-        "genero" : "survival horror",
-        "idioma" : "ingles y español",
-        "cooperativo" : false,
-       "descripcion" : "Resident Evil 2 Remake es la puesta al día del clásico original, Supone un cambio de perspectiva jugable, de estilo de juego y de ambientación, un concepto muy ambicioso desde el plano técnico y artístico pero que mantendrá la esencia del emblemático videojuego que marcó un antes y un después.",
-       "votos-positivos" : 0,
-       "votos-negativos" : 0,
-       "promedio" : 0,
-       "imagen" : "https://images2.alphacoders.com/985/thumb-1920-985249.png"
-
-    },
-    
-    { 
-        "nombre" : "Devil May Cry 5",
-        "desarrollador" : "Capcom",
-        "fecha de lanzamiento" : "7 de marzo de 2019",
-        "genero" : "acción",
-        "idioma" : "ingles y español",
-        "cooperativo" : false,
-        "descripcion" : "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
-        "votos-positivos" : 0,
-        "votos-negativos" : 0,
-        "promedio" : 0,
-        "imagen" : "https://images6.alphacoders.com/926/926723.jpg"
-
-    },
-
     {
-     
-        "nombre" : "Batman Arkham City",
-        "desarrollador" : "Rocksteady",
-        "fecha de lanzamiento" : "21 de septiembre del 2011",
-        "genero" : "accion",
-        "idioma" : "ingles y español",
-        "cooperativo" : false,
-        "descripcion" : "La continuación del aclamado Arkham Asylum para PS3 lleva de nuevo a Batman a combatir contra sus peores enemigos, esta vez en medio de un distrito de Gotham convertido en el asilo Arkham. Esta segunda parte cuenta con más libertad de movimiento, pudiendo movernos libremente por las diferentes zonas del juego. Nos enfrentaremos a enemigos como el Joker, Dos Caras, Bane o el Pingüino usando los movimientos de combate de Batman y su extenso repertorio de gadgets.",
-        "votos-positivos" : 0,
-        "votos-negativos" : 0,
-        "promedio" : 0
-
+        "nombre": "Resident Evil 2 Remake",
+        "desarrollador": "Capcom",
+        "fecha-lanzamiendo": "25 de enero de 2019",
+        "genero": "survival horror",
+        "idioma": "ingles y español",
+        "cooperativo": false,
+        "descripcion": "Resident Evil 2 Remake es la puesta al día del clásico original, Supone un cambio de perspectiva jugable, de estilo de juego y de ambientación, un concepto muy ambicioso desde el plano técnico y artístico pero que mantendrá la esencia del emblemático videojuego que marcó un antes y un después.",
+        "votos-positivos": 0,
+        "votos-negativos": 0,
+        "promedio": 0,
+        "imagen": "https://images2.alphacoders.com/985/thumb-1920-985249.png"
     },
-
     {
-     
-        "nombre" : "Mortal Kombat 11",
-        "desarrollador" : "NetherRealm Studios",
-        "fecha de lanzamiento" : "7 de marzo de 2019",
-        "genero" : "accion",
-        "idioma" : "ingles y español",
-        "cooperativo" : false,
-        "descripcion" : "Se trata de la undécima secuela de una serie de títulos de combate y peleas de marcada estructura 2D, que en esta ocasión, además de añadir los mejores gráficos de la serie y el gore más descarnado en los llamados Fatality, presentará luchadores clásicos y nuevos, más modos de juego. ",
-        "votos-positivos" : 0,
-        "votos-negativos" : 0,
-        "promedio" : 0
-
+        "nombre": "Devil May Cry 5",
+        "desarrollador": "Capcom",
+        "fecha de lanzamiento": "7 de marzo de 2019",
+        "genero": "acción",
+        "idioma": "ingles y español",
+        "cooperativo": false,
+        "descripcion": "Devil May Cry 5 es la quinta entrega de la serie de juegos de acción en tercera persona o ‘hack and slash’ de Capcom. Retomando la saga después del lanzamiento de la cuarta parte, hace diez años, Hideaki Itsuno director del título y de la mayoría de los capítulos de las aventuras de Dante, promete una vuelta a los orígenes y una jugabilidad frenética y desafiante con distintos personajes. ",
+        "votos-positivos": 0,
+        "votos-negativos": 0,
+        "promedio": 0,
+        "imagen": "https://images6.alphacoders.com/926/926723.jpg"
+    },
+    {
+        "nombre": "Batman Arkham City",
+        "desarrollador": "Rocksteady",
+        "fecha de lanzamiento": "21 de septiembre del 2011",
+        "genero": "accion",
+        "idioma": "ingles y español",
+        "cooperativo": false,
+        "descripcion": "La continuación del aclamado Arkham Asylum para PS3 lleva de nuevo a Batman a combatir contra sus peores enemigos, esta vez en medio de un distrito de Gotham convertido en el asilo Arkham. Esta segunda parte cuenta con más libertad de movimiento, pudiendo movernos libremente por las diferentes zonas del juego. Nos enfrentaremos a enemigos como el Joker, Dos Caras, Bane o el Pingüino usando los movimientos de combate de Batman y su extenso repertorio de gadgets.",
+        "votos-positivos": 0,
+        "votos-negativos": 0,
+        "promedio": 0
+    },
+    {
+        "nombre": "Mortal Kombat 11",
+        "desarrollador": "NetherRealm Studios",
+        "fecha de lanzamiento": "7 de marzo de 2019",
+        "genero": "accion",
+        "idioma": "ingles y español",
+        "cooperativo": false,
+        "descripcion": "Se trata de la undécima secuela de una serie de títulos de combate y peleas de marcada estructura 2D, que en esta ocasión, además de añadir los mejores gráficos de la serie y el gore más descarnado en los llamados Fatality, presentará luchadores clásicos y nuevos, más modos de juego. ",
+        "votos-positivos": 0,
+        "votos-negativos": 0,
+        "promedio": 0
     }
-
 ]
