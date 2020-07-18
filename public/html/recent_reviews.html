@@ -17,9 +17,10 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
 
-  <script src="../scripts/reviewsPopulares.js"></script>
+    <script src="../scripts/games_functions.js"></script>
+    <script src="../scripts/review_functions.js"></script>
 
-  <title>Reseñas Populares</title>
+  <title>Reseñas Recientes</title>
 </head>
 
 <body>
@@ -29,10 +30,10 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="juegos.html">Juegos</a>
+        <a class="nav-link" href="games.html">Juegos</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -40,24 +41,24 @@
           Reseñas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="reseñas-recientes.html">Más recientes</a>
-          <a class="dropdown-item active" href="reseñas-populares.html">Populares</a>
+          <a class="dropdown-item active" href="recent_reviews.html">Más recientes</a>
+          <a class="dropdown-item" href="popular_reviews.html">Populares</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Menos valoradas</a>
         </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a href="acceder.html" class="btn btn-outline-success mr-sm-2 text-white">Acceder</a>
-      <a href="registro.html" class="btn btn-outline-info my-2 my-sm-0 text-white">Registrar</a>
+      <a href="login.html" class="btn btn-outline-success mr-sm-2 text-white">Acceder</a>
+      <a href="register.html" class="btn btn-outline-info my-2 my-sm-0 text-white">Registrar</a>
     </form>
   </nav>
 
   <div id="titulo">
     <div class="container" style="margin-top: 3%;">
-      <h1 class="display-4 text-white text-center">Reseñas más populares</h1>
+      <h1 class="display-4 text-white text-center">Reseñas más recientes</h1>
       <p class="display-5 text-muted text-center">
-        Echale un vistazo a las reseñas más populares valorados por nuestros usuarios
+        Explora las reseñas mas recientes hechos por nuestra comunidad
       </p>
       <div class="container">
         <div class="d-flex justify-content-center ">
@@ -90,6 +91,7 @@
   <div id="Contenido" class="container">
     <hr>
   </div>
+
 
   <footer class="mb-6 px-3 text-white text-center alt-text-small">
     <div class="col-md-6 mx-auto text-center text-gray-lighter">

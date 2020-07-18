@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="../stylesheets/reseñas.css">
+  <link rel="stylesheet" href="../stylesheets/acceder.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -17,19 +17,24 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
 
-  <title>JUEGOS</title>
+  <script src="../scripts/support.js"></script>
+  <script src="../scripts/accounts_functions.js"></script>
+  <script src="../scripts/login_functions.js"></script>
+
+  <title>Acceder</title>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #00182f;">
     <a class="navbar-brand" href="#">Rincón del Gaming</a>
+
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.html">Inicio<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link active" href="#">Juegos</a>
+      <li class="nav-item">
+        <a class="nav-link" href="games.html">Juegos</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -37,54 +42,53 @@
           Reseñas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="reseñas-recientes.html">Más recientes</a>
-          <a class="dropdown-item" href="reseñas-populares.html">Populares</a>
+          <a class="dropdown-item" href="recent_reviews.html">Más recientes</a>
+          <a class="dropdown-item" href="popular_reviews.html">Populares</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Menos valoradas</a>
         </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a href="acceder.html" class="btn btn-outline-success mr-sm-2 text-white">Acceder</a>
-      <a href="registro.html" class="btn btn-outline-info my-2 my-sm-0 text-white">Registrar</a>
+      <a href="login.html" class="btn btn-outline-success mr-sm-2 text-white">Acceder</a>
+      <a href="register.html" class="btn btn-outline-info my-2 my-sm-0 text-white">Registrar</a>
     </form>
   </nav>
 
-  <div id="titulo">
-    <div class="container" style="margin-top: 3%;">
-      <h1 class="display-4 text-white text-center">Juegos y sus Requisitos</h1>
-      <br>
-      <input id="search" type="text" class="search-field" placeholder="buscar">
-    </div>
-  </div>
-  <hr>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <img width="550px" src="https://i.pinimg.com/originals/d5/20/2b/d5202b2e18907bee267c33de0c3b3f78.jpg">
-      </div>
-      <div class="col">
-        <h2 class="text-secondary text-center">Stars Wars Jedi Fallen Order</h2>
-        <h5 class="text-white text-left"> <br>
-          Tipo de Requisito: MINIMO <br>
-          Descripcion: Requiere un procesador y un sistema operativo de 64 bits<br>
-          SO:64-bit Windows 7 / 8.1 / 10<br>
-          Procesador: AMD FX-6100 / Intel i3-3220 o equivalente<br>
-          Memoria: 8 GB de RAM<br>
-          Gráficos: AMD Radeon HD 7750, NVIDIA GeForce GTX 650 o equivalente<br>
-          DirectX: Versión 11<br>
-          Almacenamiento: 55 GB de espacio disponible</h5>
-      </div>
-      <div class="w-100">
-        <br>
-        <h5 class="text-white text-left">Es un juego que nos trasladará a una época convulsa en la cronología de Star
-          Wars, invita a encarnar a un Jedi que ha permanecido oculto a la exterminación de su religión tras la Orden
-          66. Nuestra misión será la de sobrevivir al recién fundado Imperio Galáctico, combatiendo contra los
-          Inquisidores y descubriendo más de la fragmentada y proscrita Orden Jedi.</h5>
-      </div>
-    </div>
-  </div>
+  <div id="page-content">
+    <div class="container text-left">
+      <div class="row justify-content-left">
 
+        <div class="col-sm-5">
+          <h1 class="display-4 text-center text-white">Accede y postea tus Reseñas</h1>
+          <p class="lead text-center text-white"> Entra y interactua con nuestra comunidad </p>
+        </div>
+
+        <div class="col-sm-1">
+        </div>
+
+        <div class="col-sm-5">
+          <form id='accederCuenta'>
+            <div class="form-group">
+              <label for="email" class="text-white"> Nombre de usuario o email</label>
+              <input type="text" class="form-control" id="inputNickAndEmail" aria-describedby="emailHelp"
+                placeholder="hola123 o ejemplo@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="password" class="text-white">Contraseña</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label text-white" for="exampleCheck1">Recordar</label>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success">Acceder</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="mb-6 px-3 text-white text-center alt-text-small">
     <div class="col-md-6 mx-auto text-center text-gray-lighter">

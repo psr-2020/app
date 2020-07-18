@@ -13,6 +13,8 @@ body{
   font-size: 13px;
 }
 
+/* Footer */
+
 .items, .items2{
   margin: 0 auto;
   max-width: 500px;
@@ -28,28 +30,27 @@ body{
   height: 20px;
   overflow: hidden;
 }
-
+  
 .items a span{
   display: inline-block;
   position:relative;
   transition: transform 500ms;
   -webkit-transition: -webkit-transform 500ms;
   -moz-transition: transform 500ms;
-  
 }
+
 .items a span:after{
   content: attr(data-hover);
   position: absolute;
   top: -30px;
   left:0;
   transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 .items a:hover span,
 .items a:focus span {
-	transform: translateY(30px);
+  transform: translateY(30px);
   -webkit-transform: translateY(30px);
   -moz-transform: translateY(30px);
 }
-

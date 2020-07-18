@@ -6,7 +6,7 @@ var cors = require('cors');
 
 
 var indexRouter = require('./routes/index');
-var cuentasRouter = require('./routes/cuentas');
+var cuentasRouter = require('./routes/accounts');
 var reviewsRouter = require('./routes/reviews');
 var gamesRouter = require('./routes/games');
 
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/cuentas', cuentasRouter);
+app.use('/accounts', cuentasRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/games', gamesRouter);
 
