@@ -1,3 +1,12 @@
+class Review{
+    constructor(id, game, author, day, month, year, text) {
+        this.id = id;
+        this.game = game;
+        this.author = author;
+        this.text = text;
+    }
+}
+
 reviews = [];
 tipoBusqueda = "";
 

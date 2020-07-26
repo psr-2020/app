@@ -1,3 +1,14 @@
+class Account{
+    constructor(id, name, surname, password, nickname, email){
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.password = password;
+        this.nickname = nickname;
+        this.email = email;
+    }
+}
+
 cuentas = [];
 
 function getAccounts() {
