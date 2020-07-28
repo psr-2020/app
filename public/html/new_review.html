@@ -17,6 +17,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
+    <script src="../scripts/games_functions.js"></script>
+    <script src="../scripts/nreview_functions.js"></script>
 
     <title>Reseñas Populares</title>
 </head>
@@ -63,26 +65,26 @@
         <p class="display-7 text-muted text-center">Primero que nada elije a que juego quieres dar tu opinión.</p>
         <form class="col-md-10 pb-4 mx-auto">
 
-            <div class="form-row pb-5 d-flex justify-content-center">
-                <button class="btn border border-primary bg-transparent text-white dropdown-toggle" type="button" data-toggle="dropdown"
+            <div id="listGames" class="form-row pb-5 d-flex justify-content-center">
+                <button id="btnGameSelected" class="btn border border-primary bg-transparent text-white dropdown-toggle" type="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Selecciona el juego</button>
-              <div class="dropdown-menu text-center">
-                <a class="dropdown-item" href="">Autores</a>
-                <a class="dropdown-item" href="">Nombre de juego</a>
+              <div id = "itemGame" class="dropdown-menu">
+               
               </div>
             </div>
             
-            <p class="display-7 text-muted text-center">Ahora escribe una opinión, expresate!</p>
-            <div class="form-row pb-5 d-flex justify-content-center">
+
+            <div id="textAreaContent" class="form-row pb-5 d-flex justify-content-center">
                 <div class="col-md-7">
-                    <textarea class="text-area" placeholder="¿Qué opinas del juego?" id="word-count-input"></textarea>
+                    <textarea class="text-area h-100" placeholder="¿Qué opinas del juego?"></textarea>
+                    <span id="maxChars"> 0/500 </span>
                 </div>
             </div>
                 
             <p class="display-7 text-muted text-center">La reseña se publicará con tu nombre de usuario y será pública para todos los usuarios de la comunidad.
                 <br> Acuerdate que puedes remover la reseña y modificarla.</p>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-primary border border-primary text-white mr-3" type="submit">Publicar reseña</button>
+                <button class="btn btn-primary border border-primary text-white mr-3" type="button" onclick="sendReview()">Publicar reseña</button>
                 <button class="btn btn-danger text-white" type="submit">Cancelar y volver</button>
             </div>
         </form>
