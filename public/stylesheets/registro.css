@@ -9,6 +9,13 @@ body{
   padding-top: 5%;
 }
 
+.navbar-nav{
+  font-size: 120%;
+}
+
+.nav-item{
+  padding-right: 10px;
+}
 
 .nota{
   padding-top: 20px;

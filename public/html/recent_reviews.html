@@ -1,111 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../stylesheets/reseñas.css" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="../stylesheets/reseñas.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="../scripts/games_functions.js"></script>
     <script src="../scripts/review_functions.js"></script>
 
-  <title>Reseñas Recientes</title>
-</head>
+    <title>Reseñas Recientes</title>
+  </head>
 
-<body>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark mr-3 ml-3"
+      style="background-color: #00182f;"
+    >
+      <div
+        class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+      >
+        <a class="navbar-brand" href="#">Rincón del Gaming</a>
+      </div>
 
-  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #00182f;">
-    <a class="navbar-brand" href="#">Rincón del Gaming</a>
+      <div class="mx-auto order-0">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="games.html">Juegos</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link active" href="recent_reviews.html">Recientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="popular_reviews.html">Populares</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new_review.html">Crear</a>
+          </li>
+        </ul>
+      </div>
 
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="home.html">Inicio<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="games.html">Juegos</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Reseñas
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item active" href="recent_reviews.html">Más recientes</a>
-          <a class="dropdown-item" href="popular_reviews.html">Populares</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Menos valoradas</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <a href="login.html" class="btn btn-outline-success mr-sm-2 text-white">Acceder</a>
-      <a href="register.html" class="btn btn-outline-info my-2 my-sm-0 text-white">Registrar</a>
-    </form>
-  </nav>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <a href="login.html" class="btn btn-outline-success mr-2 text-white"
+            >Accede</a
+          >
+          <a href="register.html" class="btn btn-outline-info text-white"
+            >Regístrate</a
+          >
+        </ul>
+      </div>
+    </nav>
 
-  <div id="titulo">
-    <div class="container" style="margin-top: 3%;">
-      <h1 class="display-4 text-white text-center">Reseñas más recientes</h1>
-      <p class="display-5 text-muted text-center">
-        Explora las reseñas mas recientes hechos por nuestra comunidad
-      </p>
-      <div class="container">
-        <div class="d-flex justify-content-center ">
-          <div class="col-md-7">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <button id="dpBuscar" class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Busqueda</button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Autores</a>
-                  <a class="dropdown-item" href="#">Nombre de juego</a>
+    <div id="titulo">
+      <div class="container" style="margin-top: 3%;">
+        <h1 class="display-4 text-white text-center">Reseñas más recientes</h1>
+        <p class="display-5 text-muted text-center">
+          Explora las reseñas mas recientes hechos por nuestra comunidad
+        </p>
+        <div class="container">
+          <div class="d-flex justify-content-center">
+            <div class="col-md-7">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button
+                    id="dpBuscar"
+                    class="btn btn-info dropdown-toggle"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Busqueda
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Autores</a>
+                    <a class="dropdown-item" href="#">Nombre de juego</a>
+                  </div>
                 </div>
+                <input
+                  type="text"
+                  id="busqueda"
+                  class="form-control bg-transparent text-white"
+                  aria-label="Text input with dropdown button"
+                  placeholder=""
+                />
+                <span class="input-group-btn">
+                  <button class="btn btn-success" type="button">
+                    <span id="buscarReseña" class="glyphicon glyphicon-search"
+                      >Buscar</span
+                    >
+                  </button>
+                </span>
               </div>
-              <input type="text" id="busqueda" class="form-control bg-transparent text-white"
-                aria-label="Text input with dropdown button" placeholder="">
-              <span class="input-group-btn">
-                <button class="btn btn-success" type="button">
-                  <span id="buscarReseña" class="glyphicon glyphicon-search">Buscar</span>
-                </button>
-              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <br>
+    <br />
 
-  <div id="Contenido" class="container">
-    <hr>
-  </div>
-
-
-  <footer class="mb-6 px-3 text-white text-center alt-text-small">
-    <div class="col-md-6 mx-auto text-center text-gray-lighter">
-      <section class="items">
-        <nav class="main-nav">
-          <a href="#"><span data-hover="FAQ">FAQ</span></a>
-          <a href="#"><span data-hover="Terminos">Terminos</span></a>
-          <a href="#"><span data-hover="Contacto">Contacto</span></a>
-        </nav>
-      </section>
+    <div id="Contenido" class="container">
+      <hr />
     </div>
-    <p class="nota"> © 2020 El Rincón Del Gaming</p>
-  </footer>
 
-</body>
-
+    <footer class="mb-6 px-3 text-white text-center alt-text-small">
+      <div class="col-md-6 mx-auto text-center text-gray-lighter">
+        <section class="items">
+          <nav class="main-nav">
+            <a href="#"><span data-hover="FAQ">FAQ</span></a>
+            <a href="#"><span data-hover="Terminos">Terminos</span></a>
+            <a href="#"><span data-hover="Contacto">Contacto</span></a>
+          </nav>
+        </section>
+      </div>
+      <p class="nota">© 2020 El Rincón Del Gaming</p>
+    </footer>
+  </body>
 </html>

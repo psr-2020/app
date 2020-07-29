@@ -55,9 +55,11 @@ function addReview(review) {
         '<div class="row">' +
         '<div class="col-md-4 text-center">' +
         '<br>' +
-        '<button type="button" id="like' + review.id + '" onclick="likeReview(' + review.id + ')" class="btn btn-outline-success"> <span class="text-muted">' + review.likes + '</span> Me gusta</button>' +
+        '<button type="button" onclick="likeReview(' + review.id + ')" class="btn btn-outline-secondary">' +
+        '<span class="badge badge-success" id="like' + review.id + '">' + review.likes + '</span>' + '<span class="text-white"> Positivos </span> </button>' +
         '&nbsp;&nbsp;' +
-        '<button type="button" id="dislike' + review.id + '" onclick="dislikeReview(' + review.id + ')"class="btn btn-outline-danger"> <span class="text-muted">' + review.dislikes + '</span> No me gusta </button>' +
+        '<button type="button" onclick="dislikeReview(' + review.id + ')"class="btn btn-outline-secondary">' +
+        '<span class="badge badge-danger" id="dislike' + review.id + '">' + review.dislikes + '</span>' + '<span class="text-white"> Negativos </span> </button>' +
         '</div>' +
         '</div>' +
         '<hr>'
@@ -86,8 +88,8 @@ function likeReview(idReview) {
         url: 'http://localhost:3000/reviews/like/' + idReview,
         type: 'PUT',
         success: function (result) {
-            reviews = result.respuesta;
-            $("#like" + idReview).text(reviews[idReview].likes + " Me gusta");
+            reviews = result.respuesta; 
+            $("#like" + idReview).text(reviews[idReview].likes);
         }
     });
 }
@@ -98,7 +100,7 @@ function dislikeReview(idReview) {
         type: 'PUT',
         success: function (result) {
             reviews = result.respuesta;
-            $("#dislike" + idReview).text(reviews[idReview].dislikes + " No me gusta");
+            $("#dislike" + idReview).text(reviews[idReview].dislikes);
         }
     });
 }
@@ -111,7 +113,7 @@ function hayReviewsPopulares() {
 
 function getReviews() {
     mostrarCarga();
-    $.ajax({
+    $.ajax({   
         url: "http://localhost:3000/reviews",
         type: "GET",
         error: function () {
