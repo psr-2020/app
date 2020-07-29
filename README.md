@@ -2,4 +2,4 @@
 Necesario para utilizar
 - npm install
 - npm start
-- abrir /public/html/inicio.html
+- abrir /public/html/home.html
