@@ -18,8 +18,11 @@ function sendError(text){
 function sendReview(){
     if(opinion == 0)
         return alert("No has escrito ninguna opinión!");
-    if(nameGame == 0)
+    (nameGame == 0)
         return alert("No has elegido ningún juego!");
+}
+
+function createNewReview(){
 
 }
 

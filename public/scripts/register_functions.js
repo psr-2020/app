@@ -13,6 +13,7 @@ $(document).ready(function () {
         datos.push($("#inputEmail").val());     //4
 
         // Verifica que todos los campos no sean nulos
+        
         for (var i = 0; i < 5; i++) {
             if (voidText(datos[i]))
                 return alert("Rellena todos los campos")
@@ -21,7 +22,7 @@ $(document).ready(function () {
         // Verifica la existencia de la cuenta mediante el nickname y email
         if (existAccount(datos[3], datos[4]) == 0) {
             $.ajax({
-                url: 'http://localhost:3000/cuentas',
+                url: 'http://localhost:3000/accounts',
                 type: 'POST',
                 data: {
                     id: Object.keys(cuentas).length + 1,
@@ -31,7 +32,7 @@ $(document).ready(function () {
                     nickname: datos[3],
                     email: datos[4],
                 },
-                success: function (result) {
+                success: resultado => {
                     alert("Te has registrado correctamente")
                     location.reload();
                 }

@@ -7,8 +7,8 @@ class Review{
     }
 }
 
-reviews = [];
-tipoBusqueda = "";
+var reviews = [];
+var tipoBusqueda = "";
 
 function mostrarCarga(){
     $("#Contenido").append(
@@ -69,14 +69,14 @@ function addReview(review) {
 function reviewFilter(type, text) {
 
     if (type == "Autores") {
-        return reviews.filter(function (review) {
+        return reviews.filter(review => {
             autor = review.autor.toLowerCase();
             return autor.indexOf(text) !== -1;
         });
     }
 
     if (type == "Nombre de juego") {
-        return reviews.filter(function (review) {
+        return reviews.filter(review => {
             nombreJuego = games[review.idJuego].nombre.toLowerCase()
             return nombreJuego.indexOf(text) !== -1;
         });
@@ -98,7 +98,7 @@ function dislikeReview(idReview) {
     $.ajax({
         url: 'http://localhost:3000/reviews/dislike/' + idReview,
         type: 'PUT',
-        success: function (result) {
+        success: result => {
             reviews = result.respuesta;
             $("#dislike" + idReview).text(reviews[idReview].dislikes);
         }
@@ -106,7 +106,7 @@ function dislikeReview(idReview) {
 }
 
 function hayReviewsPopulares() {
-    return reviews.filter(function (review) {
+    return reviews.filter(review => {
         return review.likes > 0 && review.dislikes > 0
     });
 }
@@ -120,7 +120,7 @@ function getReviews() {
             eliminarCarga();
             mostrarNotFound("El sistema se encuentra desactivado.")
         },
-        success: function (informacion) {
+        success: informacion => {
             eliminarCarga();
 
             reviews = informacion.respuesta;
@@ -129,7 +129,7 @@ function getReviews() {
 
             if (tipoReview == "Reseñas Populares") {
                 if (hayReviewsPopulares() != 0) {
-                    reviews.forEach(function (review) {
+                    reviews.forEach(review => {
                         if (review.likes > 0 || review.dislikes > 0)
                             addReview(review);
                     });
@@ -138,7 +138,7 @@ function getReviews() {
             }
 
             if (tipoReview == "Reseñas Recientes") {
-                reviews.forEach(function (review) {
+                reviews.forEach(review => {
                     addReview(review);
                 });
             }
@@ -167,7 +167,7 @@ $(document).ready(function () {
         if (reviewsEncontrados.length == 0)
             mostrarNotFound("No se encontrarón reseñas.");
         else {
-            reviewsEncontrados.forEach(function (review) {
+            reviewsEncontrados.forEach(review => {
                 addReview(review);
             });
         }

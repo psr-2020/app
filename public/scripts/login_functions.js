@@ -12,10 +12,6 @@ $(document).ready(function () {
             return alert('completa los campos');
         }
 
-        if (existAccount(usuario, password) != 0) {
-            alert('bienvenido ' + usuario);
-        } else {
-            alert('no existe este usuario');
-        }
+        existAccount(usuario, password) != 0 ? alert('bienvenido ' + usuario) : alert('no existe este usuario');
     });
 });

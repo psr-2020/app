@@ -9,16 +9,16 @@ class Account{
     }
 }
 
-cuentas = [];
+var cuentas = [];
 
 function getAccounts() {
-    $.get("http://localhost:3000/cuentas", function (data) {
+    $.get("http://localhost:3000/accounts", data => {
         cuentas = data.response;
     });
 }
 
 function existAccount(nick, email) {
-    return cuentas.filter(function (i) {
+    return cuentas.filter(i => {
         if (i.nickname == nick || i.email == email)
             return 1;
     });
